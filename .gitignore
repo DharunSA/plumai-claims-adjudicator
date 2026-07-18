@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.env
+.env.local
+*.log
+.DS_Store
+data/claims.json
+coverage
+.vercel
+next-env.d.ts
+

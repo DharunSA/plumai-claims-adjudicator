@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased selection:bg-plum-100 selection:text-plum-900;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(245, 243, 255, 0.6) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(237, 233, 254, 0.4) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+.card {
+  @apply rounded-2xl border border-slate-200/60 bg-white/95 shadow-sm backdrop-blur-sm transition-all duration-300;
+}
+
+.card-hover {
+  @apply hover:-translate-y-0.5 hover:border-slate-300/80 hover:shadow-md;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50 active:scale-[0.98];
+}
+
+.btn-primary {
+  @apply btn bg-gradient-to-r from-plum-600 to-plum-700 text-white shadow-sm hover:from-plum-700 hover:to-plum-800 hover:shadow-md hover:shadow-plum-500/10 focus:ring-4 focus:ring-plum-500/20;
+}
+
+.btn-ghost {
+  @apply btn border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 hover:text-slate-900 focus:ring-4 focus:ring-slate-100;
+}
+
+.label {
+  @apply mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-500;
+}
+
+.input {
+  @apply w-full rounded-xl border border-slate-200 bg-white/80 px-4 py-2.5 text-sm transition-all focus:border-plum-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-plum-500/10 placeholder:text-slate-400;
+}
+
+/* Custom Scrollbar for modern feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-50/50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-slate-200 hover:bg-slate-300 transition-colors;
+}
